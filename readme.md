@@ -215,8 +215,6 @@ TraficLight traficLight(D2, D1, D0, D5, D4, D3, (long[]){1000, 1000, 1000, 1000,
 
 Gennem dette projekt har vi tilegnet os en indledende forståelse for opbygningen af klasser i C++, en udfordring vi havde i forbindelsen opbygningen af det det halve trafiklys var at måden klassen var opbyggede krævede at vi oplyste 6 PINs men da vi i dette eksempel kun havde 3 forsøgte vi os med NULL. Ud fra vores viden fra java gav dette mening da NULL her er "intet", men det viser sig at i C++ er dette 0, og 0 er en PIN på boarded, hvilket gav fejl i mønsteret vi havde opsat. Da vi fik rettet dette til -1 i stedet virkede vores 1½ kryds. Se video herunder:
 
-<video width="500" controls>
-  <source src="IMG_1283.mov" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
+https://github.com/Marpeddata/robolog/assets/99390764/d2901565-5902-4440-9c69-0eddae9a66d6
+
 
