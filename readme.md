@@ -1,8 +1,9 @@
 # 22 aug - 2023 - The Board
 
 Fik introduktion til Robotter & automatik som fag samt intro til både C++ og microchippen vi kommer til at benytte. Grundlæggende opsætning af et projekt via PlatformIO (extension i VSCode)
+
 - Chip info samt nyttige links:
-NodeMCU 1.0 (ESP-12E Module) (Board) - VSCode setup
+  NodeMCU 1.0 (ESP-12E Module) (Board) - VSCode setup
 
 ![ChipDataSheet](image.png)
 
@@ -28,11 +29,11 @@ void setup()
 }
 ```
 
- til eksempelvis at få en LED pære til at lyse, i projektet ses eksempler på hvordan vi fik 3 LED dioder til at blinke.
+til eksempelvis at få en LED pære til at lyse, i projektet ses eksempler på hvordan vi fik 3 LED dioder til at blinke.
 
 ```
 // D3 er porten direkte fra chippen/boarded. //
-int redPin = D3; 
+int redPin = D3;
 int yellowPin = D1;
 int greenPin = D2;
 
@@ -59,7 +60,7 @@ void loop()
 
 <img src="image-1.png" alt="drawing" width="500"/>
 
-Vi lærte om brugen af states til at få en serie af handlinger til ske, måden chippen fungere er at der reelt set kun kan ske 1 ting af gangen pr port. Så måden man arbejder med at få flere elementer til at arbejde samtidig er ved at skabe states. Dette fungere på den måde at man i et eksempel med 3 dioder, i state_1 så lyser den første led og de 2 andre slukket. I state_2 lyser midterste dioder og de 2 andre slukket og i state_3 lyser den sidste og de 2 andre slukket. På den måde kan man arbejde via loop funktionen, så de lyser på skift. Med denne måde at tænke på kræver det at hver komponent tænkes ind i hvert stadie. 
+Vi lærte om brugen af states til at få en serie af handlinger til ske, måden chippen fungere er at der reelt set kun kan ske 1 ting af gangen pr port. Så måden man arbejder med at få flere elementer til at arbejde samtidig er ved at skabe states. Dette fungere på den måde at man i et eksempel med 3 dioder, i state_1 så lyser den første led og de 2 andre slukket. I state_2 lyser midterste dioder og de 2 andre slukket og i state_3 lyser den sidste og de 2 andre slukket. På den måde kan man arbejde via loop funktionen, så de lyser på skift. Med denne måde at tænke på kræver det at hver komponent tænkes ind i hvert stadie.
 
 Principperne fra undersvisningen skal benyttes i en opgave hvor der skal code 1½ trafiklys, så de skifter som et trafiklys gør i "virkeligheden". billedeksempel på sates og hvornår 1 trafiklys lyser (da der er 2 retninger vises 2x3 pære):
 
@@ -82,13 +83,14 @@ void loop() {
 if(digitalRead(buttonPin) == LOW) {
 Serial.println(count);
 count++;
-delay(10); // Compensate for noise when clicking the physical button. 
-while (digitalRead(buttonPin) == LOW) 
+delay(10); // Compensate for noise when clicking the physical button.
+while (digitalRead(buttonPin) == LOW)
 {
 }
-delay(10); // Compensate for noise when releasing the physical button. 
+delay(10); // Compensate for noise when releasing the physical button.
 {
 ```
+
 (Se koden i sensor/button for eksempel på knap klasse og uden brug af delay i koden)
 
 En mere kode baseret viden der blev tilegnet var den generelle brug af ENUM i kode. Som er en data type som kan bruges til at sætte en liste af konstanter(eksempel fra sensor/button):
@@ -118,7 +120,7 @@ private:
 };
 ```
 
-Senere kan kan en switch case benyttes på følgende måde: 
+Senere kan kan en switch case benyttes på følgende måde:
 
 ```
 void Button::update(long now)
@@ -152,25 +154,27 @@ void Button::update(long now)
     }
 }
 ```
--------------------
-![Video Preview](boom.gif)
--------------------
 
+---
+
+## ![Video Preview](boom.gif)
 
 # 31 aug - 2023 - WIFI
 
+Til dagen i dag havde hver gruppe fået forskellige sensorer og opgaven at få dem til at virke, min gruppe fik en sonar, vi havde dog lidt udforringer med at få denne til at aflæse afstand, hvor vi testede 3 forskellige kode eksempler som burde virke, men stadig uden held. Eksemplerne ses i sensor mappen og button mappen deri. Selv om der ikke kom et resultat ud af det, var der stadig god læring i at undersøge komponenten i form af datasheets samt læne sig op af artikler og blog posts omkring denne fra andre der har arbejdet med samme komponent. Derudover som det ses i projektet "sonar - third" så har vi forsøgt os med et framework "NewPing" som er specielt lavet til netop den komponent vi arbejdede med. Læringen her lå i at dependencies i nodeMCU ligger i platformio.ini, så skal der tilføjes noget gøres der heri.
 
-Til dagen i dag havde hver gruppe fået forskellige sensorer og opgaven at få dem til at virke, min gruppe fik en sonar, vi havde dog lidt udforringer med at få denne til at aflæse afstand, hvor vi testede 3 forskellige kode eksempler som burde virke, men stadig uden held. Eksemplerne ses i sensor mappen og button mappen deri. Selv om der ikke kom et resultat ud af det, var der stadig god læring i at undersøge komponenten i form af datasheets samt læne sig op af artikler og blog posts omkring denne fra andre der har arbejdet med samme komponent. Derudover som det ses i projektet "sonar - third" så har vi forsøgt os med et framework "NewPing" som er specielt lavet til netop den komponent vi arbejdede med. Læringen her lå i at dependencies i nodeMCU ligger i platformio.ini, så skal der tilføjes noget gøres der heri. 
+Viden fra undervisningen denne dag gik på hvordan man i platforIO kan finde libraries at benytte, så dette er en viderebygning på det føromtalte, da disse installeres via ini filen. Libraries findes i PIO Home og Libraries fanen herinde.
 
-Viden fra undervisningen denne dag gik på hvordan man i platforIO kan finde libraries at benytte, så dette er en viderebygning på det føromtalte, da disse installeres via ini filen. Libraries findes i PIO Home og Libraries fanen herinde. 
+Vi opsatt et projekt til at bygge en webserver på MCU'en, projektet ses i Wifi mappen og "Wifi test" projektet heri.
 
-Vi opsatt et projekt til at bygge en webserver på MCU'en, projektet ses i Wifi mappen og "Wifi test" projektet heri. 
+I forbindelsen med arbejdet med sonar fandt vi flere eksempler af kode hvor
 
-I forbindelsen med arbejdet med sonar fandt vi flere eksempler af kode hvor 
 ```
 Serial.begin(115200);
 ```
+
 Var sat som det ses her til 115200. Benyttede vi dette, fik vi en masse ulæselige tegn some kun blev fixet ved at ændre 115200 til 9600. Det viser sig at denne værdi definere skrivehastigheden igennem usb kablet MCU'en er forbundet med. Som det ses i ini filen i wifi projektet kan værdien for projektet definere her.
+
 ```
 monitor_speed = 115200
 ```
@@ -190,15 +194,14 @@ Koden til webserveren ses samme sted hvor dependency informationen findes PIO ho
   {
     val = 1;
   }
-  ```
+```
+
 Når koden uploades og der forbindes med de wifi info der også står i koden, så gives der i terminalen en ip som sammen med hhv. /gpio/0 og /gpio/1 kan få val 0 og val 1 til at "ske":
 eks. 127.0.0.1/gpio/0
 
-Dette er humlen i hvordan funktioner kan køres over wifi. 
-
+Dette er humlen i hvordan funktioner kan køres over wifi.
 
 ## Trafiklys projekt - Aflevering d. 5 sep - 2023
-
 
 Dette er vores første studypoint opgaven og opgaven er baseret på at få 1½ lyskryds til at køre (ikke porte nok på boarded til at kunne køre 2). Men pointen er at få 2 lyskryds til at køre ud fra samme mønster bare asynkront. Mønsteret det skal følge ses på billedet herunder og beskriver de 7 states der skal følges:
 
@@ -217,4 +220,62 @@ Gennem dette projekt har vi tilegnet os en indledende forståelse for opbygninge
 
 https://github.com/Marpeddata/robolog/assets/99390764/d2901565-5902-4440-9c69-0eddae9a66d6
 
+# 5. September - 3D print OpensCAD + JavaCSG
 
+<img src="3dcsv.png" alt="drawing" width="500"/>
+
+```
+package org.abstractica.javacsg.example;
+
+import org.abstractica.javacsg.Geometry2D;
+import org.abstractica.javacsg.Geometry3D;
+import org.abstractica.javacsg.JavaCSG;
+import org.abstractica.javacsg.JavaCSGFactory;
+
+public class myfirst3dmodel {
+
+    public static void main(String[] args) {
+        JavaCSG csg = JavaCSGFactory.createDefault();
+
+        //Bygger første box
+        Geometry3D test = csg.box3D(5,5,10,true);
+        //Bygger udstikker box
+        Geometry3D testExt = csg.box3D(4,4,12,true);
+
+        //Roterer første box på x aksen og laver en ny kopi
+        Geometry3D box = csg.rotate3DX(csg.degrees(90)).transform(test);
+
+        //Roterer første box på y aksen og laver en ny kopi
+        Geometry3D boxY = csg.rotate3DY(csg.degrees(90)).transform(test);
+
+        //Roterer udstikker box på x aksen og laver en ny kopi
+        Geometry3D boxExt = csg.rotate3DX(csg.degrees(90)).transform(testExt);
+
+        //Roterer udstikker box på y aksen og laver en ny kopi
+        Geometry3D boxExty = csg.rotate3DY(csg.degrees(90)).transform(testExt);
+
+        //tegner en 2d cirkel 5 i diameter opløsning 64 bit
+        Geometry2D circle = csg.circle2D(5,64);
+
+        //Extruder cirklen 5 - False får objektet til at stå på z aksen.
+        Geometry3D circlebox = csg.linearExtrude(5,false, circle);
+
+        //Samler alle 3 versioner af "første boks"
+        Geometry3D union = csg.union3D(box,test,boxY);
+
+        //Samler alle 3 versioner af udstikker boks
+        Geometry3D unionExt = csg.union3D(boxExt,testExt, boxExty);
+
+        //Fratrækker udstikker boks fra første boks modellen.
+        Geometry3D boxer = csg.difference3D(union, unionExt);
+
+
+
+            //Viser boxer se vedhæftede billede.
+            csg.view(boxer);
+//        csg.view(circlebox);
+    }
+
+
+}
+```
