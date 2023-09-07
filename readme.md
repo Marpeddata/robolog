@@ -298,8 +298,8 @@ Målene blev taget i undervisning og senere brugt som referancer til modellering
 
 <table>
   <tr>
-    <td><img src="xSize.jpg" alt="mcu" width="300"></td>
-    <td><img src="ySize.jpg" alt="second_image" width="300"></td>
+    <td><img src="xsize.jpg" alt="mcu" width="300"></td>
+    <td><img src="ysize.jpg" alt="second_image" width="300"></td>
   </tr>
 </table>
 
