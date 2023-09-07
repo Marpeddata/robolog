@@ -220,7 +220,7 @@ Gennem dette projekt har vi tilegnet os en indledende forståelse for opbygninge
 
 https://github.com/Marpeddata/robolog/assets/99390764/d2901565-5902-4440-9c69-0eddae9a66d6
 
-# 5. September - 3D print OpensCAD + JavaCSG
+# 5. September - 3D modellering OpensCAD + JavaCSG
 
 <img src="3dcsv.png" alt="drawing" width="500"/>
 
@@ -279,3 +279,28 @@ public class myfirst3dmodel {
 
 }
 ```
+
+# 7 September 2023 - 3D print
+Formålet med i dag var at modellere en kasse til vores MCU chip, her benyttede vi JavaCSG. Efter at have leget med dette framework til i dag var det rart at kunne se Tobias' tilgang til kodning af 3D modeller i JavaCSG. Selv om egen kode primært blev lavet med henblik på lære funktionerne at kende, er det <u>afskyelig</u> i forhold til struktur, tag et kig på eget ansvar i mappen "playingaround" i 3D folderen. 
+
+<img src="playingaround.png" alt="playingaround" width="500"/>
+
+### Jitpack 
+Et interassant værktøj/dependency vi blev introduceret til også i undervisningen var https://jitpack.io 
+Med denne er det muligt at tage et repository fra github og skabe en dependency i vores eget java projekt så man eksempelvis kan bruge classer fra dette repo. Vi brugte det i projektet under 3D folder "MCUbox" til at kunne importere hele biblioteket fra JavaCSG så ikke man er nød til at modellere via en klon af dette repo.
+
+----------------------------------------------------------------
+
+Ligeledes i MCUboxen kan koden til vores kasse til MCU'en findes:
+<img src="mcubox.png" alt="mcu" width="500"/>
+
+Målene blev taget i undervisning og senere brugt som referancer til modelleringen i JavaCSG/OpenSCAD:
+
+<table>
+  <tr>
+    <td><img src="xSize.jpg" alt="mcu" width="300"></td>
+    <td><img src="ySize.jpg" alt="second_image" width="300"></td>
+  </tr>
+</table>
+
+<img src="mcuprint.gif" alt="mcu" width="500"/>
