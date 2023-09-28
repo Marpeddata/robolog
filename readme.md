@@ -281,15 +281,17 @@ public class myfirst3dmodel {
 ```
 
 # 7 September 2023 - 3D print
-Formålet med i dag var at modellere en kasse til vores MCU chip, her benyttede vi JavaCSG. Efter at have leget med dette framework til i dag var det rart at kunne se Tobias' tilgang til kodning af 3D modeller i JavaCSG. Selv om egen kode primært blev lavet med henblik på lære funktionerne at kende, er det <u>afskyelig</u> i forhold til struktur, tag et kig på eget ansvar i mappen "playingaround" i 3D folderen. 
+
+Formålet med i dag var at modellere en kasse til vores MCU chip, her benyttede vi JavaCSG. Efter at have leget med dette framework til i dag var det rart at kunne se Tobias' tilgang til kodning af 3D modeller i JavaCSG. Selv om egen kode primært blev lavet med henblik på lære funktionerne at kende, er det <u>afskyelig</u> i forhold til struktur, tag et kig på eget ansvar i mappen "playingaround" i 3D folderen.
 
 <img src="playingaround.png" alt="playingaround" width="500"/>
 
-### Jitpack 
-Et interassant værktøj/dependency vi blev introduceret til også i undervisningen var https://jitpack.io 
+### Jitpack
+
+Et interassant værktøj/dependency vi blev introduceret til også i undervisningen var https://jitpack.io
 Med denne er det muligt at tage et repository fra github og skabe en dependency i vores eget java projekt så man eksempelvis kan bruge classer fra dette repo. Vi brugte det i projektet under 3D folder "MCUbox" til at kunne importere hele biblioteket fra JavaCSG så ikke man er nød til at modellere via en klon af dette repo.
 
-----------------------------------------------------------------
+---
 
 Ligeledes i MCUboxen kan koden til vores kasse til MCU'en findes:
 <img src="mcubox.png" alt="mcu" width="500"/>
@@ -304,3 +306,40 @@ Målene blev taget i undervisning og senere brugt som referancer til modellering
 </table>
 
 <img src="mcuprint.gif" alt="mcu" width="500"/>
+
+# 12 September 2023 - Oplæg
+
+Dagen i dag gik mest af alt på et oplæg af et fælles projekt med henblik på eksamen, Tobias fremlagde ideen om at lave en togbane som kunne styres via nodemcu, her var planen at lave alt fra spor og sporskifte til togets konstruktion og div vogne. Havde selv min egen ide så selv om dette var et udemærket forslag gik jeg med at lave et automatisk vande system til en potteplante.
+
+Ideen som udgangspunk:
+
+- Sensor til at måle fugtighed i jorden.
+- Kode til nodeMCU der kontrollerede i intervaller ex. hvert 5min.
+- Vandpumpe der kunne aktiveres via samme kode/funktion på mcu'en, ved en given fugtighed.
+- Hvis tiden er til det ville jeg også gerne få logget aflæsningerne af fugtigheden til at indsamle data.
+
+Ideen blev som udgangspunkt godkendt af Tobias men der blev lagt vægt på at foruden kontruktionen til at huse alle komponenterne så skulle der også designes vandbeholder og urtepotte med henblik på 3d print.
+
+# 15 + 19 September 2023 - Down with the sickness
+
+<img src="giphy.gif" alt="sick" width="500"/>
+
+# 22 September 2023 - Modellering
+
+I dag fik jeg lavet en 3D model af fugtighedsmåleren til mit system, formålet med denne er at kunne bruge den som cutout til holderen denne skal sidde i og derfor er begge ben ikke modelleret til fulde da det er meningen de skal stikke ud for at sidde i jorden.
+
+Model:
+<img src="humsen.png" alt="humidsendor" width="500"/>
+
+Sendor:
+<img src="senhum.jpg" alt="humidsendor" width="500"/>
+
+Foruden dette arbejde fik jeg også lavet research på opsætningen og kredsløb, samt fundet kode eksempel på sensores, dette kan ses i "plantesystem" mappen.
+
+# 22 September 2023 - Skift af retning
+
+Grundet en hvis form for stress over tiden der er tilbage før eksamen og nå at blive færdig, valgte jeg at sadle om og fik lov at joine en gruppe for at kunne være flere om samme projekt. Derfor er målsætningen nu at lave et spilledåse der kan spille musik. Planen er at modellere en spilledåse hvori nodeMCU'en skal være, sammen med 2 komponenter, en lille højtaler samt en knap. Højtaleren skal spille temaet fra Pirates of the Caribbean og knappen skal bruges til at sikre at spille dåsen kun spiller når kassen er åben.
+
+Dagen blev brugt på at modellere og lave prøveprint af hængslerne der skal holde låg og kasse sammen. Først blev der brainstormet på ideer og vi endte med formen herunder:
+
+Model
