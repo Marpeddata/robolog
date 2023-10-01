@@ -328,18 +328,98 @@ Ideen blev som udgangspunkt godkendt af Tobias men der blev lagt vægt på at fo
 
 I dag fik jeg lavet en 3D model af fugtighedsmåleren til mit system, formålet med denne er at kunne bruge den som cutout til holderen denne skal sidde i og derfor er begge ben ikke modelleret til fulde da det er meningen de skal stikke ud for at sidde i jorden.
 
-Model:
+
+#### Model:
+------------------------
+
 <img src="humsen.png" alt="humidsendor" width="500"/>
 
-Sendor:
+#### Sensor:
+------------------------
+
 <img src="senhum.jpg" alt="humidsendor" width="500"/>
 
 Foruden dette arbejde fik jeg også lavet research på opsætningen og kredsløb, samt fundet kode eksempel på sensores, dette kan ses i "plantesystem" mappen.
 
-# 22 September 2023 - Skift af retning
+# 26 September 2023 - Skift af retning
 
 Grundet en hvis form for stress over tiden der er tilbage før eksamen og nå at blive færdig, valgte jeg at sadle om og fik lov at joine en gruppe for at kunne være flere om samme projekt. Derfor er målsætningen nu at lave et spilledåse der kan spille musik. Planen er at modellere en spilledåse hvori nodeMCU'en skal være, sammen med 2 komponenter, en lille højtaler samt en knap. Højtaleren skal spille temaet fra Pirates of the Caribbean og knappen skal bruges til at sikre at spille dåsen kun spiller når kassen er åben.
 
 Dagen blev brugt på at modellere og lave prøveprint af hængslerne der skal holde låg og kasse sammen. Først blev der brainstormet på ideer og vi endte med formen herunder:
 
-Model
+
+#### Model
+----------------------------------------------------------------
+<table>
+  <tr>
+    <td><img src="grip.png" alt="grip" width="500"></td>
+    <td><img src="rail.png" alt="rail" width="400"></td>
+  </tr>
+</table>
+
+#### Printet:
+----------------------------------------------------------------
+<table>
+  <tr>
+    <td><img src="joint1.jpg" alt="join" width="500"></td>
+    <td><img src="joint2.jpg" alt="joint" width="500"></td>
+  </tr>
+</table>
+
+
+# 29 September 2023 - Polyhedron + Nyt prøveprint af hængsel
+
+<img src="kisteform.png" alt="shape" width="500"/>
+
+Da vi i gruppen talte om at nogle afbilleder af skatteskister ikke alle havde rette linjer, besluttede jeg mig for at bruge tiden idag på at arbejde med værktøjet i JavaCSG kaldet Polyhedron.
+
+<img src="chestex.jpg" alt="chest" width="500"/>
+
+Med billedet herover for øje kom arbejded jeg mig hen imod formen som ses indledningsvis. Koden herunder et et eksempel på opbygningen af en polyhedron:
+
+```
+Geometry3D chest = csg.polyhedron3D(vertices, all);
+```
+
+Først samles en liste over alle punkterne i den form der ønskes tegnet, kaldet vertices:
+
+```
+List<Vector3D> vertices = new ArrayList<>();
+		vertices.add(csg.vector3D(1.5, 1.5, 1));
+		vertices.add(csg.vector3D(-1.5, 1.5, 1));
+		vertices.add(csg.vector3D(-1.5, -1.5, 1));
+		vertices.add(csg.vector3D(1.5, -1.5, 1));
+		vertices.add(csg.vector3D(1, 1, -1));
+		vertices.add(csg.vector3D(-1, 1, -1));
+		vertices.add(csg.vector3D(-1, -1, -1));
+		vertices.add(csg.vector3D(1, -1, -1));
+```
+
+Derefter samles en ny liste med lister som definere hver side i formen. Her tages der udgangspunkt listen af vertices og hver side defineres ud fra indexet i vertices listen:
+
+```
+List<Integer> side1 = new ArrayList<>();
+side1.add(6);
+side1.add(7);
+side1.add(3);
+side1.add(2);
+```
+
+Her er det vigtigt at rækkefølgen går imod uret, illutreret på billedet her:
+<img src="moduret.jpg" alt="chest" width="500"/>
+
+I tilfældet her samles der 6 sider af kassen til sidste i listen "all" som bruges i polyhedron værktøjet(se længere oppe):
+
+```
+List all = new ArrayList<>();
+		all.add(side1);
+		all.add(side2);
+		all.add(side3);
+		all.add(side4);
+		all.add(side5);
+		all.add(side6);
+```
+
+Vi fik lavet endnu et prøveprint med småjusteringer til hængslet, som ses på billedet her:
+
+<img src="printtwopointo.jpg" alt="chest" width="500"/>
