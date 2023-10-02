@@ -423,3 +423,9 @@ List all = new ArrayList<>();
 Vi fik lavet endnu et prøveprint med småjusteringer til hængslet, som ses på billedet her:
 
 <img src="printtwopointo.jpg" alt="chest" width="500"/>
+
+--------
+
+<img src="print.gif" alt="chest" width="500"/>
+
+----------------------------------------------------------------
