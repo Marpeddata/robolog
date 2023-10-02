@@ -426,6 +426,6 @@ Vi fik lavet endnu et prøveprint med småjusteringer til hængslet, som ses på
 
 --------
 
-<img src="print.gif" alt="chest" width="500"/>
+<img src="print.GIF" alt="chest" width="500"/>
 
 ----------------------------------------------------------------
