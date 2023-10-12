@@ -429,3 +429,82 @@ Vi fik lavet endnu et prøveprint med småjusteringer til hængslet, som ses på
 <img src="print.GIF" alt="chest" width="500"/>
 
 ----------------------------------------------------------------
+
+# 3 Oktober 2023 - Prøveprint af Kasse design + låg
+
+Dagen blev brugt på at sammensætte hængsler med kasse konstruktionen, derudover tog vi pindende fra nodeMCU kassen der blev modelleret og printet demonstreret tilbage d. 7 september, til at fiksere boarded i bunden af kassen, der blev også tilføjet et hul til USB-kablet så strøm kan gives til boarded når kassen er lukket.
+
+<img src="testprintmodel.png" alt="testmodel" width="500"/>
+
+Grundet huller til gribere samt USB var vi nød til at tilføje support til printet som krævede rens af printet.
+
+<img src="supportremove.jpg" alt="testmodel" width="500"/>
+
+Udfordringer ved først print:
+- Ikke plads til at få låget påsat uden at mase elementerne sammen.
+- Masen resulterede i at et af griberne knækkede.
+- For lidt plads til at kunne have alle komponenterne vi ønsker nede i kassen.
+- Ikke taget højde for kassens tykkelse da hullet til USB kablet blev placeret, som resulterede i at det ikke kunne komme igennem.
+
+#### Tester nodeMCU med buzzer og knap.
+<img src="surcuittest.jpg" alt="kredsløb" width="500"/>
+
+#### Testprint af låg og kasse sat sammen.
+<img src="testprint101.jpg" alt="testkasse" width="500"/>
+
+----------------------------------------------------------------
+
+# 6 Oktober 2023 - Litophane 
+
+Da vi arbejder med en skattekiste kræver det også at indholdet af kassen er derefter, vores indledende ide var at printe gulmønter, men da dette ville kræve print af en større mængde mønter til at putte i kassen, søgte vi andre muligheder og faldt over Litophane printing som er en metode hvor du nytter print tykkelse og lysets gennemtrængning i materialet til at skabe motiver der kommer til sin ret med lys bag ved printet.
+
+<img src="litophane.webp" alt="lith" width="500"/>
+
+Fordelen med at benytte var at vi kunne skabe en rum under laget med billedet i kassen hvor der var plads til vores komponenter, vi øjnede også at vi skulle tilføje LED pære til vores kredsløb under printet. Billedet herunder blev benyttet til litophane:
+
+<img src="coins.webp" alt="lithBillede" width="500"/>
+
+Litophane blev genereret uden om JavaCSG og OpensCAD via hjemmesiden her:
+
+https://itslitho.com/
+
+
+<img src="lithTestPrint.jpg" alt="lithtest" width="500"/>
+
+----------------------------------------------------------------
+
+# 10 Oktober 2023 - Fokus på knap og lukkemekanismen
+
+Formålet med kassen er som tidligere beskrevet at når denne åbnes skal der spilles pirates of the caribbean og nu med den tilføjelse at der også skal være lys i kassen, alt dette skal styres via en knap som låget trykker ned for at slukke hele systemet. Vi skal derfor fiksere knappen i toppen af kassen og have låget til at lukke ned over knappen. 
+
+Der blev her modelleret følgende design til at holde knappen:
+
+<img src="holder.png" alt="holder" width="500"/>
+
+På trods af mål på knappen lavede vi et prøve print til at teste størrelsen mod knap komponeneten.
+
+<img src="holdertestprint.jpg" alt="holdertest" width="500"/>
+
+Selv om billedet ikke afspejler dette helt, passede knappen perfekt ned i. Lidt for perfekt hvilket gjorde det svært at få knappen ud. Så vi justerede en smule på designet før tilføjelsen til selve kasse designet. 
+
+Knappen er den eneste komponent i nuværende design som ikke sidder på et fumplebrændt og krævede derfor lodning:
+
+<img src="lodning.jpg" alt="lod" width="500"/>
+
+Desginet med rillen i midten er så knappen kan monteres fra siden med plads til ledningerne fastlodet på knappen.
+
+Vi kom her tættere og tættere på næste iteration af kasse designet, og der blev opdateret rettelserne fra d. 3, samt tilføjet en rille til litophane laget, samt en kant i kassens låg til at lukke ned over knappen for at sikre en lukket kasse også (de)aktiverede knappen. Som tidligere beskrevet ville vi gerne forsøge at få formen på kassen til at ligne en skattekiste, men afviger fra formen fra d. 29 september. Derimod har vi ændret låget så dette er rundt. For at gøre plads til LED'er samt 2 små fumplebræder, har vi også gjort størrelsen på kasse en smule større.
+
+<table>
+  <tr>
+    <td><img src="twopointo1.png" alt="join" width="500"></td>
+    <td><img src="twopointo2.png" alt="joint" width="760"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><img src="twopointo3.png" alt="join" width="500"></td>
+    <td><img src="twopointo4.png" alt="joint" width="640"></td>
+  </tr>
+</table>
+
