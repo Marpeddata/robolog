@@ -328,14 +328,15 @@ Ideen blev som udgangspunkt godkendt af Tobias men der blev lagt vægt på at fo
 
 I dag fik jeg lavet en 3D model af fugtighedsmåleren til mit system, formålet med denne er at kunne bruge den som cutout til holderen denne skal sidde i og derfor er begge ben ikke modelleret til fulde da det er meningen de skal stikke ud for at sidde i jorden.
 
-
 #### Model:
-------------------------
+
+---
 
 <img src="humsen.png" alt="humidsendor" width="500"/>
 
 #### Sensor:
-------------------------
+
+---
 
 <img src="senhum.jpg" alt="humidsendor" width="500"/>
 
@@ -347,9 +348,10 @@ Grundet en hvis form for stress over tiden der er tilbage før eksamen og nå at
 
 Dagen blev brugt på at modellere og lave prøveprint af hængslerne der skal holde låg og kasse sammen. Først blev der brainstormet på ideer og vi endte med formen herunder:
 
-
 #### Model
-----------------------------------------------------------------
+
+---
+
 <table>
   <tr>
     <td><img src="grip.png" alt="grip" width="500"></td>
@@ -358,14 +360,15 @@ Dagen blev brugt på at modellere og lave prøveprint af hængslerne der skal ho
 </table>
 
 #### Printet:
-----------------------------------------------------------------
+
+---
+
 <table>
   <tr>
     <td><img src="joint1.jpg" alt="join" width="500"></td>
     <td><img src="joint2.jpg" alt="joint" width="500"></td>
   </tr>
 </table>
-
 
 # 29 September 2023 - Polyhedron + Nyt prøveprint af hængsel
 
@@ -424,11 +427,11 @@ Vi fik lavet endnu et prøveprint med småjusteringer til hængslet, som ses på
 
 <img src="printtwopointo.jpg" alt="chest" width="500"/>
 
---------
+---
 
 <img src="print.GIF" alt="chest" width="500"/>
 
-----------------------------------------------------------------
+---
 
 # 3 Oktober 2023 - Prøveprint af Kasse design + låg
 
@@ -441,20 +444,23 @@ Grundet huller til gribere samt USB var vi nød til at tilføje support til prin
 <img src="supportremove.jpg" alt="testmodel" width="500"/>
 
 Udfordringer ved først print:
+
 - Ikke plads til at få låget påsat uden at mase elementerne sammen.
 - Masen resulterede i at et af griberne knækkede.
 - For lidt plads til at kunne have alle komponenterne vi ønsker nede i kassen.
 - Ikke taget højde for kassens tykkelse da hullet til USB kablet blev placeret, som resulterede i at det ikke kunne komme igennem.
 
 #### Tester nodeMCU med buzzer og knap.
+
 <img src="surcuittest.jpg" alt="kredsløb" width="500"/>
 
 #### Testprint af låg og kasse sat sammen.
+
 <img src="testprint101.jpg" alt="testkasse" width="500"/>
 
-----------------------------------------------------------------
+---
 
-# 6 Oktober 2023 - Litophane 
+# 6 Oktober 2023 - Litophane
 
 Da vi arbejder med en skattekiste kræver det også at indholdet af kassen er derefter, vores indledende ide var at printe gulmønter, men da dette ville kræve print af en større mængde mønter til at putte i kassen, søgte vi andre muligheder og faldt over Litophane printing som er en metode hvor du nytter print tykkelse og lysets gennemtrængning i materialet til at skabe motiver der kommer til sin ret med lys bag ved printet.
 
@@ -468,14 +474,14 @@ Litophane blev genereret uden om JavaCSG og OpensCAD via hjemmesiden her:
 
 https://itslitho.com/
 
-
+<img src="litophtest.png" alt="lithoptest" width="500"/>
 <img src="lithTestPrint.jpg" alt="lithtest" width="500"/>
 
-----------------------------------------------------------------
+---
 
 # 10 Oktober 2023 - Fokus på knap og lukkemekanismen
 
-Formålet med kassen er som tidligere beskrevet at når denne åbnes skal der spilles pirates of the caribbean og nu med den tilføjelse at der også skal være lys i kassen, alt dette skal styres via en knap som låget trykker ned for at slukke hele systemet. Vi skal derfor fiksere knappen i toppen af kassen og have låget til at lukke ned over knappen. 
+Formålet med kassen er som tidligere beskrevet at når denne åbnes skal der spilles pirates of the caribbean og nu med den tilføjelse at der også skal være lys i kassen, alt dette skal styres via en knap som låget trykker ned for at slukke hele systemet. Vi skal derfor fiksere knappen i toppen af kassen og have låget til at lukke ned over knappen.
 
 Der blev her modelleret følgende design til at holde knappen:
 
@@ -485,7 +491,7 @@ På trods af mål på knappen lavede vi et prøve print til at teste størrelsen
 
 <img src="holdertestprint.jpg" alt="holdertest" width="500"/>
 
-Selv om billedet ikke afspejler dette helt, passede knappen perfekt ned i. Lidt for perfekt hvilket gjorde det svært at få knappen ud. Så vi justerede en smule på designet før tilføjelsen til selve kasse designet. 
+Selv om billedet ikke afspejler dette helt, passede knappen perfekt ned i. Lidt for perfekt hvilket gjorde det svært at få knappen ud. Så vi justerede en smule på designet før tilføjelsen til selve kasse designet.
 
 Knappen er den eneste komponent i nuværende design som ikke sidder på et fumplebrændt og krævede derfor lodning:
 
@@ -507,4 +513,3 @@ Vi kom her tættere og tættere på næste iteration af kasse designet, og der b
     <td><img src="twopointo4.png" alt="joint" width="640"></td>
   </tr>
 </table>
-
