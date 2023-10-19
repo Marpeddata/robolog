@@ -522,6 +522,8 @@ På trods af vores sidste testprint valgte vi at gå med den hvide top, der selv
 
 #### Færdige print:
 
+https://github.com/Marpeddata/robolog/assets/99390764/559e2d95-86b8-41f8-941f-28aaa2fe1917
+
 #### Kredsløb:
 
 <img src="circuit.jpg" alt="lod" width="500"/>
