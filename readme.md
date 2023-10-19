@@ -513,3 +513,19 @@ Vi kom her tættere og tættere på næste iteration af kasse designet, og der b
     <td><img src="twopointo4.png" alt="joint" width="640"></td>
   </tr>
 </table>
+
+# 13 Oktober 2023 - Færdige produkt
+
+Dagen i dag er sidste dag i valgfaget Robotter og Automatisering, og vores spillekasse står over for sidste iteration af låget. Grundet vores design hvor gribere ligger lige under lågets kant, har det været en udfordring at finde en måde at printe den på som giver et pænt finish. Derfor har vi i dag forsøgt os med at printe et låg liggende på kassens top. Da toppen er designet med en runding har vi måtte gøre det sidste forsøg her en smule fladt på toppen for at kunne printe den uden at det ryger af pladen under print.
+
+På trods af vores sidste testprint valgte vi at gå med den hvide top, der selv om denne også har lidt ujævn overflade stadig er den bedst i forhold til færdige print og at gribere stadig er fastmonteret på denne efter supporten er fjernet fra printet.
+
+#### Færdige print:
+
+#### Kredsløb:
+
+<img src="circuit.jpg" alt="lod" width="500"/>
+
+#### Billede af alle 3D printede elementer under valgfag:
+
+<img src="familypicture.jpg" alt="lod" width="500"/>
